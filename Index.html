@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>AlunoAPI Frontend</title>
+  <link rel="stylesheet" href="Aluno.css">
+</head>
+<body>
+  <h1>Gerenciamento de Alunos</h1>
+
+  <!-- Formulário de cadastro -->
+  <section class="form-section">
+    <h2>Cadastrar Novo Aluno</h2>
+    <form id="alunoForm">
+      <input type="text" id="nome" placeholder="Nome" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="text" id="telefone" placeholder="Telefone" required>
+      <button type="submit">Salvar</button>
+    </form>
+  </section>
+
+  <!-- Tabela -->
+  <section class="table-section">
+    <h2>Lista de Alunos</h2>
+    <table id="alunoTable">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Telefone</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Populado via JS -->
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Modal edição -->
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Editar Aluno</h2>
+      <form id="editForm">
+        <input type="hidden" id="editId">
+        <input type="text" id="editNome" placeholder="Nome" required>
+        <input type="email" id="editEmail" placeholder="Email" required>
+        <input type="text" id="editTelefone" placeholder="Telefone" required>
+        <button type="submit">Atualizar</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="Aluno.js"></script>
+</body>
+</html>
+
