@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>AlunoAPI Frontend</title>
-  <link rel="stylesheet" href="Aluno.css">
+  <meta charset="UTF-8" />
+  <title>Gerenciamento de Alunos</title>
+  <link rel="stylesheet" href="Aluno.css" />
 </head>
 <body>
   <h1>Gerenciamento de Alunos</h1>
@@ -12,12 +12,17 @@
   <section class="form-section">
     <h2>Cadastrar Novo Aluno</h2>
     <form id="alunoForm">
-      <input type="text" id="nome" placeholder="Nome" required>
-      <input type="email" id="email" placeholder="Email" required>
-      <input type="text" id="telefone" placeholder="Telefone" required>
+      <input type="text" id="nome" placeholder="Nome" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="text" id="telefone" placeholder="Telefone" required />
       <button type="submit">Salvar</button>
     </form>
   </section>
+
+  <!-- Loading -->
+  <div id="loading" style="text-align:center; display:none; margin: 20px;">
+    <p>🔄 Carregando alunos...</p>
+  </div>
 
   <!-- Tabela -->
   <section class="table-section">
@@ -43,16 +48,18 @@
       <span class="close">&times;</span>
       <h2>Editar Aluno</h2>
       <form id="editForm">
-        <input type="hidden" id="editId">
-        <input type="text" id="editNome" placeholder="Nome" required>
-        <input type="email" id="editEmail" placeholder="Email" required>
-        <input type="text" id="editTelefone" placeholder="Telefone" required>
+        <input type="hidden" id="editId" />
+        <input type="text" id="editNome" placeholder="Nome" required />
+        <input type="email" id="editEmail" placeholder="Email" required />
+        <input type="text" id="editTelefone" placeholder="Telefone" required />
         <button type="submit">Atualizar</button>
       </form>
     </div>
   </div>
 
+  <!-- Toast -->
+  <div id="toast" class="toast"></div>
+
   <script src="Aluno.js"></script>
 </body>
 </html>
-
